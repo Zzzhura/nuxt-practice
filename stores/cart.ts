@@ -15,6 +15,7 @@ export type CartItem = {
 
 export const useCartStore = defineStore("cart", {
   state: () => ({
+    installationSelected: false,
     items: [
       {
         id: 1,
@@ -78,6 +79,7 @@ export const useCartStore = defineStore("cart", {
     },
     clearCart() {
       this.items = [];
+      this.installationSelected = false;
     },
   },
 });

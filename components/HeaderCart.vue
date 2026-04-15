@@ -6,7 +6,7 @@
     <div class="header-cart__text">
       <span class="header-cart__text__title">Ваша корзина</span>
       <span class="header-cart__text__count">{{ itemsCount }} товара</span>
-      <span class="header-cart__text__price"> {{ totalPrice }} ₽</span>
+      <span class="header-cart__text__price"> {{ formattedTotalPrice }} ₽</span>
     </div>
   </div>
 </template>
@@ -16,7 +16,9 @@ import { useCartStore } from "~/stores/cart";
 
 const cartStore = useCartStore();
 const itemsCount = computed(() => cartStore.itemsCount);
-const totalPrice = computed(() => cartStore.totalPrice);
+const formattedTotalPrice = computed(() =>
+  new Intl.NumberFormat("ru-RU").format(cartStore.totalPrice),
+);
 </script>
 <style scoped>
 .header-cart__text__title,

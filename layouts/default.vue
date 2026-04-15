@@ -5,6 +5,7 @@
     <AppHeader />
     <TabsNavigator />
     <CartLayout />
+    <ViewedProductsSlider />
     <slot />
   </div>
 </template>

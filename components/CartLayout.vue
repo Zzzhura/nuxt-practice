@@ -12,6 +12,7 @@ import CartListResults from "~/components/CartListResults.vue";
 <style scoped>
 .cart-layout {
   padding-top: 20px;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
